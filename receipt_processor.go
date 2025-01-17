@@ -263,6 +263,8 @@ func main() {
 	http.HandleFunc("POST /receipts/process", processReceipt)
 	http.HandleFunc("GET /receipts/{id}/points", getPoints)
 
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server listening on localhost:8080.")
+
+	http.ListenAndServe("localhost:8080", nil)
 
 }
